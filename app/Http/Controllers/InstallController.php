@@ -126,11 +126,12 @@ class InstallController extends Controller
             // $this->dataInserts($config);
             // $this->envUpdates();
 
-            dd('Installation was Successful');
-            return response()->json([
-                'success' => "Installation was Successful",
-                'route' => url('/'),
-            ]);
+            // dd('Installation was Successful');
+            // return response()->json([
+            //     'success' => "Installation was Successful",
+            //     'route' => url('/'),
+            // ]);
+            return redirect('/');
         // } catch (\Exception $e) {
 
         // }
