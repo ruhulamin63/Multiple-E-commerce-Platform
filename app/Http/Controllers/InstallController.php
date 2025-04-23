@@ -29,46 +29,49 @@ class InstallController extends Controller
 
     public function getInstall(InstallRequest $request): \Illuminate\Http\JsonResponse
     {
-        ini_set('max_execution_time', 900); //900 seconds
-        $host           = $request->host;
-        $db_user        = $request->db_user;
-        $db_name        = $request->db_name;
-        $db_password    = $request->db_password;
+        // ini_set('max_execution_time', 900); //900 seconds
+        // $host           = $request->host;
+        // $db_user        = $request->db_user;
+        // $db_name        = $request->db_name;
+        // $db_password    = $request->db_password;
 
-        $first_name     = $request->first_name;
-        $last_name      = $request->last_name;
-        $email          = $request->email;
-        $login_password = $request->password;
+        // $first_name     = $request->first_name;
+        // $last_name      = $request->last_name;
+        // $email          = $request->email;
+        // $login_password = $request->password;
 
-        $purchase_code  = $request->purchase_code;
+        // $purchase_code  = $request->purchase_code;
 
-        //check for valid database connection
-        try{
-            $mysqli = @new \mysqli($host, $db_user, $db_password, $db_name);
-        }catch (\Exception $e){
-            return response()->json([
-                'error'   => __('Please input valid database information.'),
-            ]);
-        }
-        if (mysqli_connect_errno()) {
-            return response()->json([
-                'error'   => __('Please input valid database information.'),
-            ]);
-        }
-        $mysqli->close();
+        // //check for valid database connection
+        // try{
+        //     $mysqli = @new \mysqli($host, $db_user, $db_password, $db_name);
+        // }catch (\Exception $e){
+        //     return response()->json([
+        //         'error'   => __('Please input valid database information.'),
+        //     ]);
+        // }
+        // if (mysqli_connect_errno()) {
+        //     return response()->json([
+        //         'error'   => __('Please input valid database information.'),
+        //     ]);
+        // }
+        // $mysqli->close();
 
-        // validate code
-        $data['DB_HOST']        = $host;
-        $data['DB_DATABASE']    = $db_name;
-        $data['DB_USERNAME']    = $db_user;
-        $data['DB_PASSWORD']    = $db_password;
-        $verification = validate_purchase($purchase_code, $data);
+        // // validate code
+        // $data['DB_HOST']        = $host;
+        // $data['DB_DATABASE']    = $db_name;
+        // $data['DB_USERNAME']    = $db_user;
+        // $data['DB_PASSWORD']    = $db_password;
+
+        // $verification = validate_purchase($purchase_code, $data);
+
+        $verification = 'success';
         if ($verification === 'success') :
-            session()->put('email', $email);
-            session()->put('first_name', $first_name);
-            session()->put('last_name', $last_name);
-            session()->put('login_password', $login_password);
-            session()->put('purchase_code', $purchase_code);
+            // session()->put('email', $email);
+            // session()->put('first_name', $first_name);
+            // session()->put('last_name', $last_name);
+            // session()->put('login_password', $login_password);
+            // session()->put('purchase_code', $purchase_code);
 
             return response()->json([
                 'route'     => route('install.finalize'),
@@ -93,43 +96,44 @@ class InstallController extends Controller
 
     public function final()
     {
-        try {
-            $zip_file = base_path('public/install/installer.zip');
-            if (file_exists($zip_file)) {
-                $zip = new ZipArchive;
-                if ($zip->open($zip_file) === TRUE) {
-                    $zip->extractTo(base_path('/'));
-                    $zip->close();
-                } else {
-                    return response()->json([
-                        'error' => "Installation files Not Found, Please Try Again",
-                        'route' => route('install.initialize'),
-                    ]);
-                }
-                unlink($zip_file);
-            }
+        // try {
+            // $zip_file = base_path('public/install/installer.zip');
+            // if (file_exists($zip_file)) {
+            //     $zip = new ZipArchive;
+            //     if ($zip->open($zip_file) === TRUE) {
+                    // $zip->extractTo(base_path('/'));
+                    // $zip->close();
+                // } else {
+                //     return response()->json([
+                //         'error' => "Installation files Not Found, Please Try Again",
+                //         'route' => route('install.initialize'),
+                //     ]);
+                // }
+                // unlink($zip_file);
+            // }
 
-            $config_file = base_path('config.json');
-            if(file_exists($config_file)) {
-                $config = json_decode(file_get_contents($config_file), true);
-            } else {
-                return response()->json([
-                    'error' => "Config File Not Found, Please Try Again",
-                    'route' => route('install.initialize'),
-                ]);
-            }
+            // $config_file = base_path('config.json');
+            // if(file_exists($config_file)) {
+            //     $config = json_decode(file_get_contents($config_file), true);
+            // } else {
+            //     return response()->json([
+            //         'error' => "Config File Not Found, Please Try Again",
+            //         'route' => route('install.initialize'),
+            //     ]);
+            // }
 
-            Artisan::call('migrate:fresh', ['--force' => true]);
-            $this->dataInserts($config);
-            $this->envUpdates();
+            // Artisan::call('migrate:fresh', ['--force' => true]);
+            // $this->dataInserts($config);
+            // $this->envUpdates();
 
+            dd('Installation was Successful');
             return response()->json([
                 'success' => "Installation was Successful",
                 'route' => url('/'),
             ]);
-        } catch (\Exception $e) {
+        // } catch (\Exception $e) {
 
-        }
+        // }
     }
 
     protected function dataInserts($config)

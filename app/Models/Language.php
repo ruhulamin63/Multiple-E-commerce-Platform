@@ -9,6 +9,7 @@ class Language extends Model
 {
     use HasFactory;
 
+    protected $table = 'custom_languages';
     protected $fillable = [
       'name','locale','flag','text_direction','status'
     ];

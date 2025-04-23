@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LanguageSeeder::class);
         $this->call(LanguageConfigSeeder::class);
         $this->call(FlagIconSeeder::class);
-        $this->call(TimeZoneSeeder::class);
+        // $this->call(TimeZoneSeeder::class);
         $this->call(CurrencySeeder::class);
         $this->call(SettingsSeeder::class);
         $this->call(StoreFront::class);
@@ -125,7 +125,7 @@ class DatabaseSeeder extends Seeder
 
         //addon
 //        $this->call(OtpSmsTemplateSeeder::class);
-        $this->call(CountrySeeder::class);
+        // $this->call(CountrySeeder::class);
 //        $this->call(StateSeeder::class);
 //        $this->call(CitySeeder::class);
 

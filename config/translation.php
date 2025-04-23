@@ -82,8 +82,8 @@ return [
 
         'connection' => '',
 
-        'languages_table' => '',
+        'languages_table' => 'languages',
 
-        'translations_table' => '',
+        'translations_table' => 'translations',
     ],
 ];

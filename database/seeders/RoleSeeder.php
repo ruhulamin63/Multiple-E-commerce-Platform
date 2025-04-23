@@ -12,11 +12,12 @@ class RoleSeeder extends Seeder
     {
         //role seed
         Role::create(['name' => 'Superadmin',
-            'slug' => 'superadmin',
+            'slug' => 'super-admin',
             'permissions' => $this->superAdminPermissions(),
         ]);
+        
         Role::create(['name' => 'Staff',
-            'slug' => 'staff',
+            'slug' => 'staff1',
             'permissions' => $this->managerPermissions(),
         ]);
     }

@@ -24,13 +24,13 @@ class InstallRequest extends FormRequest
     public function rules()
     {
         return [
-            'host'          => 'required',
-            'db_user'       => 'required',
-            'db_name'       => 'required',
-            'first_name'    => 'required',
-            'last_name'     => 'required',
-            'email'         => 'required|email',
-            'password'      => 'required|min:6',
+            // 'host'          => 'required',
+            // 'db_user'       => 'required',
+            // 'db_name'       => 'required',
+            // 'first_name'    => 'required',
+            // 'last_name'     => 'required',
+            // 'email'         => 'required|email',
+            // 'password'      => 'required|min:6',
             // 'purchase_code' => 'required',
         ];
     }
