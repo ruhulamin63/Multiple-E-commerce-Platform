@@ -29,3 +29,19 @@ yarn-error.log
 
 !public/images/.gitkeep
 *.zip
+
+# Dependency directories
+/node_modules
+/vendor
+
+# Laravel specific files and folders
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/*
+/storage/logs/laravel.log
+/storage/logs/*
+/storage
