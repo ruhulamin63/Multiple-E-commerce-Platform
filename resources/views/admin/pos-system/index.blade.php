@@ -26,5 +26,5 @@
 @endsection
 
 @push('script')
-    <script src="{{static_asset('admin/js/app.js')}}"></script>
+    @vite(['resources/js/admin.js'])
 @endpush

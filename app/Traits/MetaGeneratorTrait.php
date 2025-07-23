@@ -35,7 +35,7 @@ trait MetaGeneratorTrait {
                     'meta_title' => $language->meta_title == '' ? strip_tags($language->name) : strip_tags($language->meta_title),
                     'meta_description' => $meta_description,
                     'meta_keywords' => $language->meta_keywords,
-                    'meta_image' => getFileLink('190x230', $product->meta_image),
+                    // 'meta_image' => getFileLink('190x230', $product->meta_image),
                     'meta_published_time' => $product->created_at,
                     'meta_section' => 'Product Details',
                     'meta_url' => url()->current(),
@@ -88,7 +88,7 @@ trait MetaGeneratorTrait {
                 $meta_data = [
                     'meta_title' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " "),
                     'meta_description' => env('APP_NAME', 'Yoori - Ecommerce CMS Platform'),
-                    'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
+                    // 'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
                     'meta_keywords' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " ").', e-commerce',
                     'meta_published_time' => date('Y-m-d H:i:s'),
                     'meta_section' => 'Home Section',
@@ -122,7 +122,7 @@ trait MetaGeneratorTrait {
                 $meta_data = [
                     'meta_title' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " "),
                     'meta_description' => env('APP_NAME', 'Yoori - Ecommerce CMS Platform'),
-                    'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
+                    // 'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
                     'meta_keywords' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " ").', e-commerce',
                     'meta_published_time' => date('Y-m-d H:i:s'),
                     'meta_section' => 'Home Section',
@@ -168,7 +168,7 @@ trait MetaGeneratorTrait {
                 $meta_data = [
                     'meta_title' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " "),
                     'meta_description' => env('APP_NAME', 'Yoori - Ecommerce CMS Platform'),
-                    'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
+                    // 'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
                     'meta_keywords' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " ").', e-commerce',
                     'meta_published_time' => date('Y-m-d H:i:s'),
                     'meta_section' => 'Home Section',
@@ -184,7 +184,7 @@ trait MetaGeneratorTrait {
             $meta_data = [
                 'meta_title' => settingHelper('meta_title', $lang) ? : settingHelper('system_name'),
                 'meta_description' => settingHelper('meta_description', $lang) ? : settingHelper('system_name'),
-                'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
+                // 'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
                 'meta_keywords' => settingHelper('meta_keywords', $lang) ,
                 'meta_published_time' => $setting ? $setting->created_at : null,
                 'meta_section' => 'Home Section',
@@ -196,7 +196,7 @@ trait MetaGeneratorTrait {
             $meta_data = [
                 'meta_title' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " "),
                 'meta_description' => env('APP_NAME', 'Yoori - Ecommerce CMS Platform'),
-                'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
+                // 'meta_image' => is_file_exists(@settingHelper('favicon')['image_16x16_url']) ? get_media(settingHelper('favicon')['image_16x16_url']) : static_asset('images/ico/favicon.ico'),
                 'meta_keywords' => strtok(env('APP_NAME', 'Yoori - Ecommerce CMS Platform'), " ").', e-commerce',
                 'meta_published_time' => date('Y-m-d H:i:s'),
                 'meta_section' => 'Home Section',

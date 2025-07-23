@@ -1,109 +1,109 @@
 
 const home = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/home');
+    '../components/frontend/pages/home.vue');
 const about = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/about');
+    '../components/frontend/pages/about.vue');
 const allBlogs = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/blogs');
+    '../components/frontend/pages/blogs.vue');
 const blogDetails = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/blog_details');
+    '../components/frontend/pages/blog_details.vue');
 const brands = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/brands');
+    '../components/frontend/pages/brands.vue');
 const sellers = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/all-seller');
+    '../components/frontend/pages/all-seller.vue');
 const campaignDetails = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/campaign_details');
+    '../components/frontend/pages/campaign_details.vue');
 const allCampaign = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/all_campaign');
+    '../components/frontend/pages/all_campaign.vue');
 const allCategory = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/category');
+    '../components/frontend/pages/category.vue');
 const contact = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/contact');
+    '../components/frontend/pages/contact.vue');
 const dailyDeals = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/daily-deals');
+    '../components/frontend/pages/daily-deals.vue');
 const giftIdea = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/gift-idea');
+    '../components/frontend/pages/gift-idea.vue');
 const businessIdea = () => import(/* webpackPrefetch: true */
     '../components/frontend/pages/business-idea.vue');
 const productDetails = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/product-details');
+    '../components/frontend/pages/product-details.vue');
 const trackOrder = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/track-order');
+    '../components/frontend/pages/track-order.vue');
 const afterTrackOrder = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/after-track-order');
+    '../components/frontend/pages/after-track-order.vue');
 const checkout = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/checkout');
+    '../components/frontend/pages/checkout.vue');
 const payment = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/payment');
+    '../components/frontend/pages/payment.vue');
 const orderConfirmation = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/order-confirmation');
+    '../components/frontend/pages/order-confirmation.vue');
 const cart = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/cart');
+    '../components/frontend/pages/cart.vue');
 const login = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/login');
+    '../components/frontend/pages/login.vue');
 const register = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/register');
+    '../components/frontend/pages/register.vue');
 const seller_register = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/seller_register');
+    '../components/frontend/pages/seller_register.vue');
 const resetPassword = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/forgot-password');
+    '../components/frontend/pages/forgot-password.vue');
 const wishlist = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/wishlist');
+    '../components/frontend/pages/user/wishlist.vue');
 const filterProducts = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/filter_sidebar');
+    '../components/frontend/pages/filter_sidebar.vue');
 const flashSale = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/flash-sale');
+    '../components/frontend/pages/flash-sale.vue');
 const compareList = () => import(/*webpackPrefetch: true */
-    '../components/frontend/pages/compare-list');
+    '../components/frontend/pages/compare-list.vue');
 const changePassword = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/change_password');
+    '../components/frontend/pages/user/change_password.vue');
 const editProfile = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/edit-profile');
+    '../components/frontend/pages/user/edit-profile.vue');
 /*const migrateSeller = () => import(/!* webpackPrefetch: "product-details" *!/
     '../components/frontend/pages/user/migrate-to-seller');*/
 
 const migrateSeller = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/migrate-to-seller');
+    '../components/frontend/pages/user/migrate-to-seller.vue');
 
 const giftVoucher = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/gift-voucher');
+    '../components/frontend/pages/user/gift-voucher.vue');
 const notification = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/notification');
+    '../components/frontend/pages/user/notification.vue');
 const orderHistory = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/order-history');
+    '../components/frontend/pages/user/order-history.vue');
 const dashboard = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/dashboard');
+    '../components/frontend/pages/user/dashboard.vue');
 const addresses = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/addresses');
+    '../components/frontend/pages/user/addresses.vue');
 const getInvoice = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/get-invoice');
+    '../components/frontend/pages/user/get-invoice.vue');
 const reward = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/addons/rewards');
+    '../components/frontend/pages/addons/rewards.vue');
 const myWallet = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/wallet');
+    '../components/frontend/pages/user/wallet.vue');
 const shop = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/shop');
+    '../components/frontend/pages/shop.vue');
 const followedShop = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/followed-shop');
+    '../components/frontend/pages/user/followed-shop.vue');
 const digitalProductOrders = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/user/digital-product-orders');
+    '../components/frontend/pages/user/digital-product-orders.vue');
 const videoShop = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/addons/video_shop');
+    '../components/frontend/pages/addons/video_shop.vue');
 const videoShopDetails = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/addons/video_shop_details');
+    '../components/frontend/pages/addons/video_shop_details.vue');
 const error_404 = () => import(/* webpackPrefetch : true" */
-    '../components/errors/not_found');
+    '../components/errors/not_found.vue');
 const affiliate_register = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/affiliate_users/affiliate_register');
+    '../components/frontend/pages/affiliate_users/affiliate_register.vue');
 const affiliate_program = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/affiliate_users/affiliate_program');
+    '../components/frontend/pages/affiliate_users/affiliate_program.vue');
 const affiliate_system = () => import(/* webpackPrefetch: true */
-    '../components/frontend/pages/affiliate_users/affiliate_system');
+    '../components/frontend/pages/affiliate_users/affiliate_system.vue');
 
 export const routes = [
     {
         path: '/',
-        component: () => import(/* webpackPrefetch : true" */'../components/frontend/master'),
+        component: () => import(/* webpackPrefetch : true" */'../components/frontend/master.vue'),
 
         children: [
             {

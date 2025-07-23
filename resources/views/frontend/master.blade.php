@@ -10,6 +10,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="base_url" content="{{url('/')}}">
     <title>{{ arrayCheck('title',$meta) ? $meta['title'] : settingHelper('system_name') }}</title>
+    
     <!-- SEO -->
     <meta name='title' content="{!! $meta['meta_title'] !!}"/>
     <meta name="description" content="{!! $meta['meta_description'] !!}"/>
@@ -26,7 +27,7 @@
     <meta property="og:type" content="{{ $meta['meta_section'] }}"/>
     <meta property="og:locale" content="{{ app()->getLocale() }}"/>
     <meta property="og:site_name" content="{{ settingHelper('system_name') }}"/>
-    <meta property="og:image" content="{{ $meta['meta_image'] }}"/>
+    {{-- <meta property="og:image" content="{{ $meta['meta_image'] }}"/> --}}
     <meta property="og:image:size" content="300"/>
     <!-- END Open Graph -->
 
@@ -45,9 +46,10 @@
 
     <!-- Font -->
     <link href="{{fontURL()}}" rel="stylesheet">
+    
     <!-- CSS -->
-
-    <link rel="stylesheet" href="{{ mix('frontend/css/app.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
     <link rel="stylesheet" href="{{ static_asset('frontend/css/materialdesignicons.min.css') }}?version={{  settingHelper('current_version')  }}">
     <link rel="stylesheet" href="{{ static_asset('frontend/css/vue-toastr-2.min.css') }}?version={{ settingHelper('current_version') }}">
 
@@ -197,7 +199,7 @@
 <input type="hidden" id="app_id" value="{{ settingHelper('app_id') }}">
 <input type="hidden" id="measurement_id" value="{{ settingHelper('measurement_id') }}">
 
-<script src="{{ mix('frontend/js/app.js') }}" async></script>
+
 <script src="{{ static_asset('frontend/js/vue-toastr-2.js') }}?version={{ settingHelper('current_version') }}"></script>
 
 @if(settingHelper('is_pusher_notification_active') == 1 && Sentinel::check())

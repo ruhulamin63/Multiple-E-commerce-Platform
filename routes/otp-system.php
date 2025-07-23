@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Route;
 Route::match(['get','post'],'admin/test-number-send', [OtpController::class, 'sendNumber'])->name('test.number.send');
 
 Route::middleware(['XSS','isInstalled'])->group(function () {
-    Route::group(
-        [
-            'prefix' => LaravelLocalization::setLocale(),
-            'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','isInstalled']
-        ], function () {
+    // Route::group(
+    //     [
+    //         'prefix' => LaravelLocalization::setLocale(),
+    //         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','isInstalled']
+    //     ], function () {
         Route::middleware(['adminCheck','loginCheck'])->prefix('admin')->group(function () {
             Route::get('otp-settings', [OtpController::class, 'otpSetting'])->name('otp-settings')->middleware('PermissionCheck:otp_setting_read');
             Route::put('otp-setting-update', [OtpController::class, 'otpSettingUpdate'])->name('admin.setting.otp.update')->middleware('PermissionCheck:otp_setting_update');
@@ -24,5 +24,5 @@ Route::middleware(['XSS','isInstalled'])->group(function () {
             Route::get('test-number/{type}', [OtpController::class, 'testPage'])->name('test.number');
             //sms test route
         });
-    });
+    // });
 });

@@ -5,14 +5,18 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
+import jQuery from 'jquery';
+import { createPopper } from '@popperjs/core';
+import 'bootstrap';
+
 try {
-    window.$ = window.jQuery = require('jquery');
-    window.Popper = require('@popperjs/core');
-    window.bootstrap = require('bootstrap');
+    window.$ = window.jQuery = jQuery;
+    window.createPopper = createPopper;
 
 } catch (e) {}
 
-window.axios = require('axios');
+import axios from 'axios';
+window.axios = axios;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common['CSRF-TOKEN'] = getValueFromId('token');
 window.axios.defaults.headers.common["Authorization"] = getValueFromId('token');
@@ -32,8 +36,9 @@ window.app_path = getValueFromId('app_path');
 
 
 import Echo from 'laravel-echo';
+import Pusher from 'pusher-js';
 
-window.Pusher = require('pusher-js');
+window.Pusher = Pusher;
 
 /*window.Echo = new Echo({
     broadcaster: 'pusher',

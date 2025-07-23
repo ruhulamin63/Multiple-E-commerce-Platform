@@ -1,14 +1,15 @@
-// require('./bootstrap');
+// import './bootstrap';
 
-import Vue from 'vue/dist/vue'
+import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-window.axios = require('axios');
+window.axios = axios;
 
 Vue.use(VueAxios, axios)
 
-Vue.component('pos_system', require('./components/admin/pos').default);
+import pos_system from './components/admin/pos.vue';
+Vue.component('pos_system', pos_system);
 
 import Vue2Filters from 'vue2-filters';
 

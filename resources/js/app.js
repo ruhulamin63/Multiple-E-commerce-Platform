@@ -1,7 +1,7 @@
-require('./bootstrap');
+import './bootstrap';
 
 // window.Vue = require('vue');
-import Vue from 'vue/dist/vue'
+import Vue from 'vue'
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 Vue.config.debug = false;
@@ -50,12 +50,14 @@ const store = new Vuex.Store({
 export default store;
 import helper from './helper'
 
-import objectToFormData from "./objectToFormData";
+// Import the UMD module and assign it to window
+import './objectToFormData.js';
 
-window.objectToFormData = objectToFormData;
+// The objectToFormData will be available globally
 
-Vue.component('frontend_master', require('./components/frontend/frontend_master').default);
-Vue.component('loading_button', () => import('./components/frontend/partials/loading_button'));
+import frontend_master from './components/frontend/frontend_master.vue';
+Vue.component('frontend_master', frontend_master);
+Vue.component('loading_button', () => import('./components/frontend/partials/loading_button.vue'));
 
 import VueProgressBar from 'vue-progressbar'
 

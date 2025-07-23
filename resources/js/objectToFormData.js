@@ -56,6 +56,9 @@ function objectToFormData (obj, fd, pre) {
   return fd
 }
 
+// Add ES6 export for compatibility
+window.objectToFormData = objectToFormData;
+
 return objectToFormData;
 
 })));

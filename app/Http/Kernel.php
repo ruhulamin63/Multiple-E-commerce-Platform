@@ -4,7 +4,6 @@ namespace App\Http;
 
 use App\Http\Middleware\CheckApiKeyMiddleware;
 use App\Http\Middleware\HttpMiddleware;
-use App\Http\Middleware\InstallCheckMiddleware;
 use App\Http\Middleware\IsAdminMiddleware;
 use App\Http\Middleware\IsCustomerMiddleware;
 use App\Http\Middleware\IsSellerMiddleware;
@@ -12,7 +11,6 @@ use App\Http\Middleware\IsAdminSellerMiddleware;
 use App\Http\Middleware\JwtMiddleware;
 use App\Http\Middleware\LoginCheckMiddleware;
 use App\Http\Middleware\LogoutCheckMiddleware;
-use App\Http\Middleware\NotInstallCheckMiddleware;
 use App\Http\Middleware\OnlineUserMiddleware;
 use App\Http\Middleware\PermissionCheckerMiddleware;
 use App\Http\Middleware\SellerPosPermission;
@@ -31,7 +29,7 @@ class Kernel extends HttpKernel
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
-        \Fruitcake\Cors\HandleCors::class,
+        \Illuminate\Http\Middleware\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
@@ -94,8 +92,6 @@ class Kernel extends HttpKernel
         'sellerCheck' => IsSellerMiddleware::class,
         'AdminSellerCheck' => IsAdminSellerMiddleware::class,
         'PermissionCheck' => PermissionCheckerMiddleware::class,
-        'NotInstalledCheck' => NotInstallCheckMiddleware::class,
-        'isInstalled' => InstallCheckMiddleware::class,
         'posSellerCheck' => SellerPosPermission::class,
         'CheckApiKey'=> CheckApiKeyMiddleware::class,
         'jwt.verify'=> JwtMiddleware::class,

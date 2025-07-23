@@ -1,10 +1,12 @@
 <?php
 
-
+use App\Http\Controllers\Site\HomeController;
 use Illuminate\Support\Facades\Route;
 
+// Main SPA route - handles all frontend routes
+Route::get('/{any}', [HomeController::class, 'index'])->where('any', '^(?!api|admin).*$')->name('spa');
+
+// Fallback route for any unmatched routes
 Route::fallback(function () {
-    return redirect()->route('install.initialize');
-    // return redirect('/');
-    abort(404);  // Returns a 404 not found error
+    return redirect('/');
 });

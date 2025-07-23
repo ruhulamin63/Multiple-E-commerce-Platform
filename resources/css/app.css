@@ -1,0 +1,10 @@
+/* Import existing CSS files that were combined by Laravel Mix */
+@import '../../public/frontend/css/bootstrap.min.css';
+@import '../../public/frontend/css/animate.min.css';
+@import '../../public/frontend/css/structure.css';
+@import '../../public/frontend/css/main.css';
+@import '../../public/frontend/css/development.css';
+@import '../../public/frontend/css/responsive.css';
+@import '../../public/frontend/css/vue-plyr.css';
+
+/* Add any custom styles here */

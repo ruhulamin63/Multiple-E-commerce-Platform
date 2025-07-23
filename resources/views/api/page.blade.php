@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $page->getTranslation('title',$lang) }}</title>
 
-    <link rel="stylesheet" href="{{ mix('frontend/css/app.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @if(settingHelper('text_direction') == 'rtl')
         <link rel="stylesheet" href="{{ static_asset('frontend/css/rtl.css') }}">
     @endif

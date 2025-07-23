@@ -1,13 +1,14 @@
 <?php return array (
-  'barryvdh/laravel-debugbar' => 
+  'barryvdh/laravel-dompdf' => 
   array (
     'aliases' => 
     array (
-      'Debugbar' => 'Barryvdh\\Debugbar\\Facades\\Debugbar',
+      'PDF' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
+      'Pdf' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
     ),
     'providers' => 
     array (
-      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
+      0 => 'Barryvdh\\DomPDF\\ServiceProvider',
     ),
   ),
   'brian2694/laravel-toastr' => 
@@ -32,24 +33,6 @@
     'providers' => 
     array (
       0 => 'Cartalyst\\Sentinel\\Laravel\\SentinelServiceProvider',
-    ),
-  ),
-  'facade/ignition' => 
-  array (
-    'aliases' => 
-    array (
-      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
-    ),
-    'providers' => 
-    array (
-      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
-    ),
-  ),
-  'fruitcake/laravel-cors' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Fruitcake\\Cors\\CorsServiceProvider',
     ),
   ),
   'geo-sot/laravel-env-editor' => 
@@ -80,13 +63,6 @@
     array (
       0 => 'JoeDixon\\Translation\\TranslationServiceProvider',
       1 => 'JoeDixon\\Translation\\TranslationBindingsServiceProvider',
-    ),
-  ),
-  'laravel/sail' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Sail\\SailServiceProvider',
     ),
   ),
   'laravel/sanctum' => 
@@ -165,22 +141,18 @@
       0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
-  'niklasravnsborg/laravel-pdf' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'niklasravnsborg\\LaravelPdf\\PdfServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'PDF' => 'niklasravnsborg\\LaravelPdf\\Facades\\Pdf',
-    ),
-  ),
   'nunomaduro/collision' => 
   array (
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'nunomaduro/termwind' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
   'obydul/laraskrill' => 
@@ -195,6 +167,17 @@
     'providers' => 
     array (
       0 => 'LaravelPWA\\Providers\\LaravelPWAServiceProvider',
+    ),
+  ),
+  'spatie/laravel-ignition' => 
+  array (
+    'aliases' => 
+    array (
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
   ),
   'tymon/jwt-auth' => 
